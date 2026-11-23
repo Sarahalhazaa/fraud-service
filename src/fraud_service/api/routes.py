@@ -48,3 +48,5 @@ def ready(request: Request):
         raise HTTPException(status_code=503, detail="warming up",
                             headers={"Retry-After": "5"})
     return {"status": "ready", "checked_at": datetime.now(UTC)}
+
+
